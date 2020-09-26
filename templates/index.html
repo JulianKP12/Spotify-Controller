@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Get spotify token</title>
+
+		<style>
+			
+			* {
+				font-family: Arial;
+			}
+
+			a {
+				color: #0000FF;
+				text-decoration: None;
+			}
+
+		</style>
+	
+	</head>
+	
+	<body align="center">
+
+		{% if loggedin %}
+
+		<h1>You have been logged in!</h1>
+		<h3>You can now use the controller!</h3>
+		<br>
+		<h6>(just keep the script running lmao or click <a href="logout">here</a> to logout)</h6>
+
+		{% else %}
+
+		<br>
+		<h1>Click <a href="https://accounts.spotify.com/authorize/?response_type=code&client_id=d554d59e0ba446d9b297a34aea8d6aa4&scope=user-read-playback-state%20user-modify-playback-state&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2F">here</a> to log in!</h1>
+
+		{% endif %}
+	</body>
+
+</html>
